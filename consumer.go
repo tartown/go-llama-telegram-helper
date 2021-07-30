@@ -23,3 +23,28 @@ func ProcessQueue() {
 		currentTask = task
 		if err == ErrQueueEmpty {
 			time.Sleep(time.Second * 2)
+			continue
+		}
+		ProcessTask(task)
+	}
+}
+
+
+type Result struct {
+	Text string
+	Err error
+}
+
+
+func Predict(task *Task) (chan string, chan Result) {
+
+	stream := make(chan string)
+	result := make(chan Result)
+
+	go func(){
+		callback := func(token string) bool {
+			select {
+			case stream <- token:
+				return true
+			case <- task.Stop:
+				return false

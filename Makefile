@@ -1,1 +1,2 @@
-all
+all:
+	$(MAKE) -C go

@@ -1,2 +1,2 @@
 all:
-	$(MAKE) -C go
+	$(MAKE) -C go-llama.cpp/ libbindi

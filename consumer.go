@@ -48,3 +48,22 @@ func Predict(task *Task) (chan string, chan Result) {
 				return true
 			case <- task.Stop:
 				return false
+			}
+		}
+	
+		text, err := l.Predict(
+			task.Question,
+			llama.Debug,
+			llama.SetTokenCallback(callback),
+			llama.SetTokens(nTokens), 
+			llama.SetThreads(nCpu),
+			llama.SetTopK(90),
+			llama.SetTopP(0.86),
+			llama.SetStopWords(StopWord),
+		)
+		close(stream)
+		result <- Result{text, err}
+	}()
+	
+	return stream, result
+}

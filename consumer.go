@@ -67,3 +67,29 @@ func Predict(task *Task) (chan string, chan Result) {
 	
 	return stream, result
 }
+
+// This function is a mess
+func ProcessTask(task *Task) {
+
+	log.Printf("Start processing task from user %d\n", task.UserID)
+	log.Printf("The prompt is:\n%s\n", task.Question)
+
+	// Start prediction
+	stream, result :=  Predict(task)
+
+	// Resulting generated text
+	var answer string
+
+	var counter int
+	var issent bool
+	for {
+		select {
+		case token := <- stream: 
+			if !issent && strings.TrimSpace(token) != "" {
+				answer += token
+				msg := tgbotapi.NewMessage(task.UserID, answer)
+				msg.ReplyMarkup = &stopButton
+				sent, err := bot.Send(msg)
+				if err != nil {
+					log.Println("[ProcessTask] error sending answer:", err)
+					continue

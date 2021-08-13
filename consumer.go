@@ -123,3 +123,24 @@ func ProcessTask(task *Task) {
 			
 
 			if prediction.Err != nil || strings.TrimSpace(prediction.Text) == "" || task.MessageID == 0 {
+				log.Println("[ProcessTask] prediction error:", prediction.Err, prediction.Text)
+				failure := tgbotapi.NewMessage(task.UserID, "Sorry, couldn't generate answer")
+				_, err := bot.Send(failure)
+				if err != nil {
+					log.Println("[ProcessTask] error sending failure message:", err)
+				}
+				return
+			}
+
+
+			edited := tgbotapi.NewEditMessageText(task.UserID, task.MessageID, prediction.Text)
+			// Set parse mode to Markdown if it's backticks there
+			if nBackticks := strings.Count(prediction.Text, "`"); nBackticks > 0 && nBackticks % 2 == 0 {
+				edited.ParseMode = "Markdown"
+			}
+			_, err = bot.Send(edited)
+			if err != nil {
+				log.Println("[ProcessTask] error sending answer:", err)
+			}
+
+			log.Printf("Generated answer is:\n%s\n", prediction.Text)

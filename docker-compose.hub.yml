@@ -2,4 +2,4 @@ version: '3.9'
 
 services:
   bot:
-   
+    image: thedmdim/llama

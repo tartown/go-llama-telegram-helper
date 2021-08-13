@@ -93,3 +93,33 @@ func ProcessTask(task *Task) {
 				if err != nil {
 					log.Println("[ProcessTask] error sending answer:", err)
 					continue
+				}
+				// Save answer message ID to stream tokens to it
+				task.MessageID = sent.MessageID
+				issent = true
+				continue
+			}
+
+			answer += token
+			counter++
+			if counter == 6 {
+				edited := tgbotapi.NewEditMessageText(task.UserID, task.MessageID, answer)
+				edited.ReplyMarkup = &stopButton
+				_, err := bot.Send(edited)
+				if err != nil {
+					log.Println("[ProcessTask] error streaming answer:", err)
+				}
+				counter = 0
+				
+			}
+
+		case prediction := <- result:
+
+			delete := tgbotapi.NewDeleteMessage(task.UserID, task.AnnounceID)
+			_, err := bot.Request(delete)
+			if err != nil {
+				log.Println("Couldn't delete announce message:", err)
+			}
+			
+
+			if prediction.Err != nil || strings.TrimSpace(prediction.Text) == "" || task.MessageID == 0 {

@@ -144,3 +144,8 @@ func ProcessTask(task *Task) {
 			}
 
 			log.Printf("Generated answer is:\n%s\n", prediction.Text)
+
+			return
+		}
+	}
+}

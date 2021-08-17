@@ -5,4 +5,5 @@ services:
     image: thedmdim/llama-telegram-bot
     privileged: true
     restart: always
-  
+    volumes:
+      - ${MO

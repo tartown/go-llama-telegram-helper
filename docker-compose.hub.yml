@@ -6,4 +6,4 @@ services:
     privileged: true
     restart: always
     volumes:
-      - ${MO
+      - ${MODEL_PATH}:${MODEL_

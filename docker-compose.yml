@@ -3,4 +3,5 @@ version: '3.9'
 services:
   bot:
     build:
-     
+      context: .
+    privileged: tr

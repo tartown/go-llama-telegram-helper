@@ -4,4 +4,5 @@ services:
   bot:
     build:
       context: .
-    privileged: tr
+    privileged: true
+    container_name: llama-

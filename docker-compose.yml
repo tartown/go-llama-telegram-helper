@@ -9,4 +9,5 @@ services:
     restart: always
     volumes:
       - ${MODEL_PATH}:${MODEL_PATH}
-  
+    env_file:
+      - .env

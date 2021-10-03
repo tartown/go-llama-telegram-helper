@@ -5,4 +5,5 @@ services:
     build:
       context: .
     privileged: true
-    container_name: llama-
+    container_name: llama-telegram-bot
+    restart: al

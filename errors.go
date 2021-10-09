@@ -1,1 +1,4 @@
-pac
+package main
+
+import "errors"
+

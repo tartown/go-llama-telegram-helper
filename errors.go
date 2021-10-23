@@ -2,4 +2,4 @@ package main
 
 import "errors"
 
-var ErrQueueEmpty = erro
+var ErrQueueEmpty = errors.New("queue is empt

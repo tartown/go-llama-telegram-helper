@@ -24,3 +24,27 @@ func ProcessUpdate(update tgbotapi.Update) {
 			msg.Text = "Just ask question"
 			if _, err := bot.Send(msg); err != nil {
 				log.Println(err)
+			}
+			return
+		}
+
+		if update.Message.Text == "/queue" {
+			_, n := qu.Load(update.Message.From.ID)
+
+			switch n {
+			case -1:
+				if currentTask != nil && currentTask.UserID == update.Message.From.ID {
+					msg.Text = "It's your turn now!!!"
+				} else {
+					msg.Text = "Hey! You haven't asked question yet!"
+				}
+			case 0:
+				msg.Text = "Hold a second, you're next"
+			default:
+				msg.Text = fmt.Sprintf("Hold on! Your queue is %d", n)
+			}
+			
+			if _, err := bot.Send(msg); err != nil {
+				log.Println(err)
+			}
+			return

@@ -48,3 +48,24 @@ func ProcessUpdate(update tgbotapi.Update) {
 				log.Println(err)
 			}
 			return
+		}
+
+		if chars := []rune(update.Message.Text); string(chars[0]) == "/" {
+			msg.Text = "There is no such command"
+			if _, err := bot.Send(msg); err != nil {
+				log.Println(err)
+			}
+			return
+		}
+
+		// Do enqueue task
+		task := Task{
+			UserID: update.Message.From.ID,
+			Stop: make(chan bool),
+		}
+
+		if reply := update.Message.ReplyToMessage; reply != nil && reply.From.ID == bot.Self.ID {
+			task.WrapPrevContext(reply.Text, update.Message.Text)
+		} else {
+			task.WrapInRoles(update.Message.Text)
+		}

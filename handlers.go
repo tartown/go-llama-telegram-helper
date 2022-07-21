@@ -69,3 +69,23 @@ func ProcessUpdate(update tgbotapi.Update) {
 		} else {
 			task.WrapInRoles(update.Message.Text)
 		}
+		
+		
+		n, err := qu.Enqueue(&task)
+		log.Println(err)
+		if err != nil {
+			if err == ErrOnePerUser {
+				msg.Text = "You've already asked your question. You can edit the existing one until it's your turn"
+			}
+			if err == ErrQueueLimit {
+				msg.Text = fmt.Sprintf("Now queue is full %d/%d. Wait one slot to be free at least.\nCheck queue /stats", n, qu.Limit)
+			}
+			if _, err := bot.Send(msg); err != nil {
+				log.Println(err)
+			}
+			return
+		}
+		msg.Text = fmt.Sprintf("Your question registered! Your queue is %d/%d.\nYou can edit your message until it's your turn", n, qu.Limit)
+		sent, err := bot.Send(msg)
+		if err != nil {
+			log.Println(err)

@@ -111,3 +111,9 @@ func ProcessUpdate(update tgbotapi.Update) {
 				currentTask.Stop <- true
 				currentTask.Stopped = true
 			} else {
+				callback := tgbotapi.NewCallback(update.CallbackQuery.ID, "Already stopped")
+				bot.Request(callback)
+			}
+		}
+	}
+}

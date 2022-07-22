@@ -89,3 +89,25 @@ func ProcessUpdate(update tgbotapi.Update) {
 		sent, err := bot.Send(msg)
 		if err != nil {
 			log.Println(err)
+		}
+		task.AnnounceID = sent.MessageID
+	}
+
+	if update.EditedMessage != nil {
+		task := Task{
+			UserID: update.EditedMessage.From.ID,
+			MessageID: update.EditedMessage.MessageID,
+			Question: update.EditedMessage.Text,
+		}
+		qu.Enqueue(&task)
+	}
+
+	
+	if update.CallbackQuery != nil {
+		if update.CallbackQuery.Data == "/stop" && currentTask != nil {
+			if !currentTask.Stopped {
+				callback := tgbotapi.NewCallback(update.CallbackQuery.ID, "Stopping")
+				bot.Request(callback)
+				currentTask.Stop <- true
+				currentTask.Stopped = true
+			} else {

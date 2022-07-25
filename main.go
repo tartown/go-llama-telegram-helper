@@ -6,4 +6,5 @@ import (
 	"runtime"
 	"strconv"
 
-	llama "github.com/go-skynet
+	llama "github.com/go-skynet/go-llama.cpp"
+	tgbotapi "gi

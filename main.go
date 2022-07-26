@@ -7,4 +7,4 @@ import (
 	"strconv"
 
 	llama "github.com/go-skynet/go-llama.cpp"
-	tgbotapi "gi
+	tgbotapi "github.com/go-telegram-bot-api/

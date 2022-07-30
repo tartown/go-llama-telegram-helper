@@ -12,4 +12,4 @@ import (
 
 
 var apiToken = os.Getenv("TG_TOKEN")
-var modelPath =
+var modelPath = os.Getenv("MODEL_PATH

@@ -13,4 +13,5 @@ import (
 
 var apiToken = os.Getenv("TG_TOKEN")
 var modelPath = os.Getenv("MODEL_PATH")
-var nToke
+var nTokens int
+var nCpu int

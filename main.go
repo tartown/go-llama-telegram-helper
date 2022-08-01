@@ -15,3 +15,5 @@ var apiToken = os.Getenv("TG_TOKEN")
 var modelPath = os.Getenv("MODEL_PATH")
 var nTokens int
 var nCpu int
+
+var SingleMessagePrompt str

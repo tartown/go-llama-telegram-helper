@@ -16,4 +16,5 @@ var modelPath = os.Getenv("MODEL_PATH")
 var nTokens int
 var nCpu int
 
-var SingleMessagePrompt str
+var SingleMessagePrompt string
+var ReplyMessageProm

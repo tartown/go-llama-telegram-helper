@@ -17,4 +17,5 @@ var nTokens int
 var nCpu int
 
 var SingleMessagePrompt string
-var ReplyMessageProm
+var ReplyMessagePrompt string
+var Stop

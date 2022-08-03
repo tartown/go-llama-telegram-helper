@@ -18,4 +18,4 @@ var nCpu int
 
 var SingleMessagePrompt string
 var ReplyMessagePrompt string
-var Stop
+var StopWord = os.Getenv("STOP_WO

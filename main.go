@@ -18,4 +18,6 @@ var nCpu int
 
 var SingleMessagePrompt string
 var ReplyMessagePrompt string
-var StopWord = os.Getenv("STOP_WO
+var StopWord = os.Getenv("STOP_WORD")
+
+var l *llama.LLama

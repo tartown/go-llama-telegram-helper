@@ -21,4 +21,5 @@ var ReplyMessagePrompt string
 var StopWord = os.Getenv("STOP_WORD")
 
 var l *llama.LLama
-var bot *tgbotapi.BotAP
+var bot *tgbotapi.BotAPI
+var qu *Task

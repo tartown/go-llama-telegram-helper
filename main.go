@@ -22,4 +22,5 @@ var StopWord = os.Getenv("STOP_WORD")
 
 var l *llama.LLama
 var bot *tgbotapi.BotAPI
-var qu *Task
+var qu *TaskQueue
+var currentTask *Task

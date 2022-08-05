@@ -24,3 +24,7 @@ var l *llama.LLama
 var bot *tgbotapi.BotAPI
 var qu *TaskQueue
 var currentTask *Task
+
+
+func main() {
+	var err e

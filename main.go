@@ -27,4 +27,6 @@ var currentTask *Task
 
 
 func main() {
-	var err e
+	var err error
+
+	if apiToken == 

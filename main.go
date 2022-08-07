@@ -29,4 +29,4 @@ var currentTask *Task
 func main() {
 	var err error
 
-	if apiToken == 
+	if apiToken == "" || modelPat

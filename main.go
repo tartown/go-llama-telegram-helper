@@ -29,4 +29,5 @@ var currentTask *Task
 func main() {
 	var err error
 
-	if apiToken == "" || modelPat
+	if apiToken == "" || modelPath == "" {
+		log.Fata

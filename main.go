@@ -30,4 +30,4 @@ func main() {
 	var err error
 
 	if apiToken == "" || modelPath == "" {
-		log.Fata
+		log.Fatalln("Please provi

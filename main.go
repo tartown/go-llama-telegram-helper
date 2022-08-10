@@ -30,4 +30,4 @@ func main() {
 	var err error
 
 	if apiToken == "" || modelPath == "" {
-		log.Fatalln("Please provi
+		log.Fatalln("Please provide TG_TOKEN and MODEL_

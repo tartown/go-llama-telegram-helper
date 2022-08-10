@@ -30,4 +30,7 @@ func main() {
 	var err error
 
 	if apiToken == "" || modelPath == "" {
-		log.Fatalln("Please provide TG_TOKEN and MODEL_
+		log.Fatalln("Please provide TG_TOKEN and MODEL_PATH env variables")
+	}
+
+	// Ini

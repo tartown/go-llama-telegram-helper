@@ -33,4 +33,5 @@ func main() {
 		log.Fatalln("Please provide TG_TOKEN and MODEL_PATH env variables")
 	}
 
-	// Ini
+	// Init queue
+	var queueSize =

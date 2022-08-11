@@ -34,4 +34,5 @@ func main() {
 	}
 
 	// Init queue
-	var queueSize =
+	var queueSize = 1000
+	if s := os.Geten

@@ -35,4 +35,4 @@ func main() {
 
 	// Init queue
 	var queueSize = 1000
-	if s := os.Geten
+	if s := os.Getenv("Q_SIZE"); s != "" {

@@ -37,4 +37,7 @@ func main() {
 	var queueSize = 1000
 	if s := os.Getenv("Q_SIZE"); s != "" {
 		if n, err := strconv.Atoi(s); err == nil {
-			q
+			queueSize = n
+		}
+	}
+	qu =

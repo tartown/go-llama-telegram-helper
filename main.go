@@ -40,4 +40,7 @@ func main() {
 			queueSize = n
 		}
 	}
-	qu =
+	qu = NewTaskQueue(queueSize)
+	
+
+	/

@@ -44,4 +44,5 @@ func main() {
 	
 
 	// N tokens
-	nTokens =
+	nTokens = 1000
+	if s := os.Getenv("

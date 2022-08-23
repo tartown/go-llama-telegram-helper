@@ -46,4 +46,4 @@ func main() {
 	// N tokens
 	nTokens = 1000
 	if s := os.Getenv("N_TOKENS"); s != "" {
-		if n
+		if n, err := strconv.Atoi(s

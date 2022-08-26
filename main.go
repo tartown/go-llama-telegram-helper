@@ -51,4 +51,5 @@ func main() {
 		}
 	}
 
-	// N core
+	// N cores
+	nCpu = runtime.NumCPU()

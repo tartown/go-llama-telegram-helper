@@ -48,4 +48,7 @@ func main() {
 	if s := os.Getenv("N_TOKENS"); s != "" {
 		if n, err := strconv.Atoi(s); err == nil {
 			nTokens = n
-		
+		}
+	}
+
+	// N core

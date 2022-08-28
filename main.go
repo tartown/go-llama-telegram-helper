@@ -53,3 +53,4 @@ func main() {
 
 	// N cores
 	nCpu = runtime.NumCPU()
+	if s := os.Getenv("N_CP

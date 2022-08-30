@@ -54,4 +54,4 @@ func main() {
 	// N cores
 	nCpu = runtime.NumCPU()
 	if s := os.Getenv("N_CPU"); s != "" {
-		if n, err := 
+		if n, err := strconv.Atoi(s); err == 

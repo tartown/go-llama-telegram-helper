@@ -60,4 +60,4 @@ func main() {
 	}
 
 	// Init Prompt templates
-	Si
+	SingleMessagePrompt = 

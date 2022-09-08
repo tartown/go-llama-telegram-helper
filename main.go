@@ -60,4 +60,5 @@ func main() {
 	}
 
 	// Init Prompt templates
-	SingleMessagePrompt = os.Getenv("S
+	SingleMessagePrompt = os.Getenv("SINGLE_MESSAGE_PROMPT")
+	Repl

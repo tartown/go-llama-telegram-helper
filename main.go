@@ -62,4 +62,4 @@ func main() {
 	// Init Prompt templates
 	SingleMessagePrompt = os.Getenv("SINGLE_MESSAGE_PROMPT")
 	ReplyMessagePrompt = os.Getenv("REPLY_MESSAGE_PROMPT")
-	if Sing
+	if SingleMessagePrompt == "" {

@@ -63,3 +63,4 @@ func main() {
 	SingleMessagePrompt = os.Getenv("SINGLE_MESSAGE_PROMPT")
 	ReplyMessagePrompt = os.Getenv("REPLY_MESSAGE_PROMPT")
 	if SingleMessagePrompt == "" {
+		SingleMessagePrompt = "### 

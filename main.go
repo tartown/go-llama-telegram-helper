@@ -65,4 +65,4 @@ func main() {
 	if SingleMessagePrompt == "" {
 		SingleMessagePrompt = "### User: Response to my next request. %s ### Assistant:"
 	}
-	if ReplyMe
+	if ReplyMessagePrompt == "" {

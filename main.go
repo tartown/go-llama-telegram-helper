@@ -69,4 +69,5 @@ func main() {
 		ReplyMessagePrompt = "### Assistant: %s ### User: %s \n### Assistant:"
 	}
 	if StopWord == "" {
-		StopW
+		StopWord = "###"
+	

@@ -70,4 +70,7 @@ func main() {
 	}
 	if StopWord == "" {
 		StopWord = "###"
-	
+	}
+
+	// Init LLAMA binding
+	l

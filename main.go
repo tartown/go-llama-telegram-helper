@@ -73,4 +73,4 @@ func main() {
 	}
 
 	// Init LLAMA binding
-	l
+	l, err = llama.New(modelPath, 

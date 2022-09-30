@@ -78,4 +78,4 @@ func main() {
 		log.Fatalf("Loading the model failed: %s", err.Error())
 	}
 
-	//
+	// Init Telegram API client

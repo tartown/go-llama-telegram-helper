@@ -79,3 +79,4 @@ func main() {
 	}
 
 	// Init Telegram API client
+    bot, err = t

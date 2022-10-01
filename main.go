@@ -79,4 +79,5 @@ func main() {
 	}
 
 	// Init Telegram API client
-    bot, err = tgbotapi.NewBotAPI(apiToken
+    bot, err = tgbotapi.NewBotAPI(apiToken)
+    if err != ni

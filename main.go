@@ -80,4 +80,5 @@ func main() {
 
 	// Init Telegram API client
     bot, err = tgbotapi.NewBotAPI(apiToken)
-    if err != ni
+    if err != nil {
+        log.Fatal(

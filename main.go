@@ -84,4 +84,7 @@ func main() {
         log.Fatal(err)
     }
 
-	// Start iterating throu
+	// Start iterating through queue
+	go ProcessQueue()
+
+	

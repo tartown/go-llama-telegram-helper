@@ -87,4 +87,5 @@ func main() {
 	// Start iterating through queue
 	go ProcessQueue()
 
-	
+	// Receive updates
+    u := tg

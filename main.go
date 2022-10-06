@@ -88,4 +88,5 @@ func main() {
 	go ProcessQueue()
 
 	// Receive updates
-    u := tg
+    u := tgbotapi.NewUpdate(0)
+    u.T

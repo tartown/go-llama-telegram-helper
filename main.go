@@ -89,4 +89,6 @@ func main() {
 
 	// Receive updates
     u := tgbotapi.NewUpdate(0)
-    u.T
+    u.Timeout = 60
+
+    updates

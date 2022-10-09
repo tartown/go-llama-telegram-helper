@@ -92,4 +92,5 @@ func main() {
     u.Timeout = 60
 
     updates := bot.GetUpdatesChan(u)
-    for updat
+    for update := range updates {
+	

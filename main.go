@@ -94,4 +94,5 @@ func main() {
     updates := bot.GetUpdatesChan(u)
     for update := range updates {
 		ProcessUpdate(update)
-   
+    }
+}

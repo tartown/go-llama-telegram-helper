@@ -41,3 +41,31 @@ func (q *TaskQueue) Enqueue(task *Task) (int, error) {
 
 	t, exists := q.users[task.UserID]
 	if exists {
+		// update existing
+		if t.MessageID == task.MessageID {
+			t.Question = task.Question
+			return q.Count, nil
+		}
+
+		return q.Count, ErrOnePerUser
+	}
+
+	if q.Count == q.Limit {
+		return q.Count, ErrQueueLimit
+	}
+
+
+	q.tasks = append(q.tasks, task)
+	q.users[task.UserID] = task
+	q.Count++
+
+	return q.Count, nil
+}
+
+func (q *TaskQueue) Dequeue() (*Task, error) {
+	q.mu.Lock()
+	defer q.mu.Unlock()
+
+	if q.Count == 0 {
+		return nil, ErrQueueEmpty
+	}

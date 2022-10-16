@@ -69,3 +69,14 @@ func (q *TaskQueue) Dequeue() (*Task, error) {
 	if q.Count == 0 {
 		return nil, ErrQueueEmpty
 	}
+
+	task := q.tasks[0]
+
+	q.tasks[0] = nil
+	q.tasks = q.tasks[1:]
+	delete(q.users, task.UserID)
+
+	q.Count--
+
+	return task, nil
+}

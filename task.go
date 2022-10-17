@@ -1,3 +1,6 @@
 package main
 
-import "fm
+import "fmt"
+
+type Task struct {
+	U

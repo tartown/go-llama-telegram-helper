@@ -3,4 +3,5 @@ package main
 import "fmt"
 
 type Task struct {
-	U
+	UserID         int64
+	Mes

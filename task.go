@@ -4,4 +4,5 @@ import "fmt"
 
 type Task struct {
 	UserID         int64
-	Mes
+	MessageID      int
+	A

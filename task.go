@@ -7,3 +7,5 @@ type Task struct {
 	MessageID      int
 	AnnounceID     int
 	Question       string
+	Stopped        bool
+	

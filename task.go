@@ -8,4 +8,7 @@ type Task struct {
 	AnnounceID     int
 	Question       string
 	Stopped        bool
-	Stop        chan b
+	Stop        chan bool
+}
+
+func (t *Task) 

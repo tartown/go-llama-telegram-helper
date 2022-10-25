@@ -11,4 +11,4 @@ type Task struct {
 	Stop        chan bool
 }
 
-func (t *Task) 
+func (t *Task) WrapInRoles(question string) 

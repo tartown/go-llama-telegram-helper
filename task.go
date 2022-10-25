@@ -11,4 +11,5 @@ type Task struct {
 	Stop        chan bool
 }
 
-func (t *Task) WrapInRoles(question string) 
+func (t *Task) WrapInRoles(question string) {
+	t.Question = fmt.Sprintf(

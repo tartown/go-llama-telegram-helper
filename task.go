@@ -12,4 +12,4 @@ type Task struct {
 }
 
 func (t *Task) WrapInRoles(question string) {
-	t.Question = fmt.Sprintf(
+	t.Question = fmt.Sprintf(SingleMessagePrompt, q

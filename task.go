@@ -15,4 +15,4 @@ func (t *Task) WrapInRoles(question string) {
 	t.Question = fmt.Sprintf(SingleMessagePrompt, question)
 }
 
-func (t *Task) WrapPrevContext(previo
+func (t *Task) WrapPrevContext(previous, question string) {

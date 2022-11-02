@@ -16,4 +16,5 @@ func (t *Task) WrapInRoles(question string) {
 }
 
 func (t *Task) WrapPrevContext(previous, question string) {
-	t.Question = fmt.Sprintf(ReplyMessagePrompt, previ
+	t.Question = fmt.Sprintf(ReplyMessagePrompt, previous, question)
+}

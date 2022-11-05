@@ -1,1 +1,1 @@
-[![Docker Pulls](https://img.shield
+[![Docker Pulls](https://img.shields.io/docker/pulls

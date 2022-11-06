@@ -1,1 +1,1 @@
-[![Docker Pulls](https://img.shields.io/docker/pulls
+[![Docker Pulls](https://img.shields.io/docker/pulls/tartown/go-llama-telegram

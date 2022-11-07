@@ -1,1 +1,1 @@
-[![Docker Pulls](https://img.shields.io/docker/pulls/tartown/go-llama-telegram
+[![Docker Pulls](https://img.shields.io/docker/pulls/tartown/go-llama-telegram-helper)](https://hu

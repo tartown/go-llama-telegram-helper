@@ -4,4 +4,4 @@
 # 🦙 go-llama-telegram-helper
 
 ## What?
-This is a chatbot for Tele
+This is a chatbot for Telegram that utiliz

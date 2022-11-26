@@ -4,4 +4,4 @@
 # 🦙 go-llama-telegram-helper
 
 ## What?
-This is a chatbot for Telegram that utilizes the powerful [llama.cpp](https://github.com/ggerganov/llama.cpp). Give the live insta
+This is a chatbot for Telegram that utilizes the powerful [llama.cpp](https://github.com/ggerganov/llama.cpp). Give the live instance a try over here [@tel

@@ -10,3 +10,4 @@ This is a chatbot for Telegram that utilizes the powerful [llama.cpp](https://gi
 [go-llama-telegram-helper](https://github.com/tartown/go-llama-telegram-helper) is crafted in Go and leverages [go-llama.cpp](https://github.com/go-skynet/go-llama.cpp) which is a binding to [llama.cpp](https://github.com/ggerganov/llama.cpp)
 
 ## Quick Start
+Let's get started! The

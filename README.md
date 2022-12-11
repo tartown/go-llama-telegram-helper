@@ -12,4 +12,4 @@ This is a chatbot for Telegram that utilizes the powerful [llama.cpp](https://gi
 ## Quick Start
 Let's get started! The process is straightforward!
 
-Parameters are accepted a
+Parameters are accepted as environment variables.

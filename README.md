@@ -13,3 +13,5 @@ This is a chatbot for Telegram that utilizes the powerful [llama.cpp](https://gi
 Let's get started! The process is straightforward!
 
 Parameters are accepted as environment variables.
+
+1. `MODEL_PATH=/path

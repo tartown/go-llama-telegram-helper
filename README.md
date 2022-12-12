@@ -14,4 +14,5 @@ Let's get started! The process is straightforward!
 
 Parameters are accepted as environment variables.
 
-1. `MODEL_PATH=/path
+1. `MODEL_PATH=/path/to/model`
+2. `TG_TOKEN=yo

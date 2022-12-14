@@ -16,4 +16,4 @@ Parameters are accepted as environment variables.
 
 1. `MODEL_PATH=/path/to/model`
 2. `TG_TOKEN=your_telegram_bot_token_here`
-3.
+3. `Q_SIZE=1000` - Tas

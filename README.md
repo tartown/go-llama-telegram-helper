@@ -18,4 +18,4 @@ Parameters are accepted as environment variables.
 2. `TG_TOKEN=your_telegram_bot_token_here`
 3. `Q_SIZE=1000` - Task queue limit (optional: default 1000)
 4. `N_TOKENS=1024` - Tokens to predict (optional: default 1024)
-5. `N_CPU=4` - No
+5. `N_CPU=4` - No. of CPU cores to

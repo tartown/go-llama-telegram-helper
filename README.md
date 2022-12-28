@@ -19,4 +19,5 @@ Parameters are accepted as environment variables.
 3. `Q_SIZE=1000` - Task queue limit (optional: default 1000)
 4. `N_TOKENS=1024` - Tokens to predict (optional: default 1024)
 5. `N_CPU=4` - No. of CPU cores to use (optional: default max available)
-6. `SINGLE_MESSAGE_PROMPT` - A prompt template for a direct message to bot (default in [.env.example](
+6. `SINGLE_MESSAGE_PROMPT` - A prompt template for a direct message to bot (default in [.env.example](.env.example))
+7. `REPLY_MESSAGE

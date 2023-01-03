@@ -21,4 +21,4 @@ Parameters are accepted as environment variables.
 5. `N_CPU=4` - No. of CPU cores to use (optional: default max available)
 6. `SINGLE_MESSAGE_PROMPT` - A prompt template for a direct message to bot (default in [.env.example](.env.example))
 7. `REPLY_MESSAGE_PROMPT` - A prompt template when you are replying to bot's answer (default in [.env.example](.env.example))
-8. `STOP_WORD` - Charac
+8. `STOP_WORD` - Characters to stop predict

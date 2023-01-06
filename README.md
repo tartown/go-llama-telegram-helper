@@ -23,4 +23,5 @@ Parameters are accepted as environment variables.
 7. `REPLY_MESSAGE_PROMPT` - A prompt template when you are replying to bot's answer (default in [.env.example](.env.example))
 8. `STOP_WORD` - Characters to stop prediction (default in [.env.example](.env.example))
 
-### Doc
+### Docker Compose
+You can eit

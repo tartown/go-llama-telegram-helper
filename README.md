@@ -24,4 +24,5 @@ Parameters are accepted as environment variables.
 8. `STOP_WORD` - Characters to stop prediction (default in [.env.example](.env.example))
 
 ### Docker Compose
-You can either do a local build (Preferred) or pull from Docker
+You can either do a local build (Preferred) or pull from Docker Hub
+1. `git clone

@@ -25,4 +25,4 @@ Parameters are accepted as environment variables.
 
 ### Docker Compose
 You can either do a local build (Preferred) or pull from Docker Hub
-1. `git clone https://github.com/tar
+1. `git clone https://github.com/tartown/go-llama-telegram-hel

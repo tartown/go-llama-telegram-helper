@@ -27,4 +27,4 @@ Parameters are accepted as environment variables.
 You can either do a local build (Preferred) or pull from Docker Hub
 1. `git clone https://github.com/tartown/go-llama-telegram-helper`
 2. `cp .env.example .env` and edit `.env` as per your requirements
-3. If do
+3. If doing a local build: `

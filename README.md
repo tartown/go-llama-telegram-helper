@@ -26,4 +26,5 @@ Parameters are accepted as environment variables.
 ### Docker Compose
 You can either do a local build (Preferred) or pull from Docker Hub
 1. `git clone https://github.com/tartown/go-llama-telegram-helper`
-2. `cp .env.example .env` and edit `.env` as per yo
+2. `cp .env.example .env` and edit `.env` as per your requirements
+3. If do

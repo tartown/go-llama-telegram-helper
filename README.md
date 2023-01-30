@@ -30,4 +30,5 @@ You can either do a local build (Preferred) or pull from Docker Hub
 3. If doing a local build: `docker compose up -d`
    If pulling from Docker Hub: `docker compose -f docker-compose.hub.yml up -d`
 
-### Build an
+### Build and run as binary
+First, m

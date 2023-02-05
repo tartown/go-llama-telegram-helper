@@ -31,4 +31,5 @@ You can either do a local build (Preferred) or pull from Docker Hub
    If pulling from Docker Hub: `docker compose -f docker-compose.hub.yml up -d`
 
 ### Build and run as binary
-First, make sure you have Go and C
+First, make sure you have Go and CMake installed
+1. 

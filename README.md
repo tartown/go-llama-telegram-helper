@@ -32,4 +32,4 @@ You can either do a local build (Preferred) or pull from Docker Hub
 
 ### Build and run as binary
 First, make sure you have Go and CMake installed
-1. `git clone  --recurse-submodules https://github.com/tarto
+1. `git clone  --recurse-submodules https://github.com/tartown/go-llama-telegram-h

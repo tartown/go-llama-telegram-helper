@@ -35,4 +35,4 @@ First, make sure you have Go and CMake installed
 1. `git clone  --recurse-submodules https://github.com/tartown/go-llama-telegram-helper`
 2. `cd go-llama-telegram-helper && make`
 3. `go build .`
-4. To run the binary, use `env TG_TOKE
+4. To run the binary, use `env TG_TOKEN=<your_telegram_bot_tok
